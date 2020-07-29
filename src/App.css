@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.closed-dates{
+  display: none;
+}
+
+.open-dates {
+  display: block;
+}
