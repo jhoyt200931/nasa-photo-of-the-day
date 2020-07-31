@@ -11,12 +11,12 @@ const Base = styled.div`
 
 
 function App() {
-  const dates = ["2020-07-28", "2020-07-27", "2020-07-26", "2020-07-25", "2020-07-24"];
+  
   
   return (
     <Base className="App">
       <Header />
-      <PhotoCard props={dates}/>
+      <PhotoCard/>
     </Base>
   );
 }

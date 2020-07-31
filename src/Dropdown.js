@@ -60,7 +60,7 @@ const Click = styled.div`
 const Dropdown = (props) => {
     const [open, setOpen] = useState(false);
     const toggle = () => setOpen(!open);
-    console.log(props);
+    const dates = ["2020-07-28", "2020-07-27", "2020-07-26", "2020-07-25", "2020-07-24"];
     return (
         <Container className="dropdown-container">
             <div className="dropdown-header" tabIndex={0} role="button" onClick={() => toggle(!open)}>
@@ -73,11 +73,11 @@ const Dropdown = (props) => {
                 </div>
                 <Content className="date-list" className={open ? "open-dates" : "closed-dates"}>
                     <Ul>
-                        {props.dates.map(date => {
+                        {dates.map(date => {
                             return (
                                 <ListItem key={date}>{date}
                                 <Button onClick={() => {
-                                    props.setDate({date})
+                                     props.setDate({date})
                                 }}>Select</Button>
                                 </ListItem>
                                 
