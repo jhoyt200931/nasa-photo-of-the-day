@@ -24,7 +24,7 @@ const Header = () => {
     return (
         <Head className="header">
             <Title>NASA</Title>
-            <h2>Photo Of The Day</h2>
+            <SubTitle>Photo Of The Day</SubTitle>
         </Head>
     )
 }

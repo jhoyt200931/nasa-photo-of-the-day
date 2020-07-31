@@ -77,10 +77,9 @@ const Dropdown = (props) => {
                             return (
                                 <ListItem key={date}>{date}
                                 <Button onClick={() => {
-                                     props.setDate({date})
+                                     props.setDate(date)
                                 }}>Select</Button>
                                 </ListItem>
-                                
                                 )
                             })}
                     </Ul>

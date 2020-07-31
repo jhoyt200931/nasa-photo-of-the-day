@@ -7,7 +7,7 @@ const PhotoCard = () => {
     const [date, setDate] =useState("2020-07-27");
     
     
-    useEffect((date) => {
+    useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=95tF10VHI5EfPhC5gOpgdoFIPeQCMqjwGiKznXUD`)
         .then(response => {console.log(response)
             setPhoto(response.data)})
