@@ -4,10 +4,10 @@ import Photo from "./Photo";
 import Dropdown from "./Dropdown"
 const PhotoCard = (props) => {
     const [photo, setPhoto] = useState()
-    const [date, setDate] =useState("2020-07-28")
+    const [date, setDate] =useState("2020-07-27")
     console.log(props);
     useEffect((date) => {
-        axios.get(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=DEMO_KEY`)
+        axios.get(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=95tF10VHI5EfPhC5gOpgdoFIPeQCMqjwGiKznXUD`)
         .then(response => {console.log(response)
             setPhoto(response.data)})
         .catch(error => console.log(error))
