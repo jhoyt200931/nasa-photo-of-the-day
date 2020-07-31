@@ -3,22 +3,21 @@ import styled from "styled-components";
 
 
 const Head = styled.div`
-    background-color: royalblue;
-    box-sizing: border-box;
-    padding-top: 30px;
+    border-bottom: 2px solid black;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 20px;
 `;
 const Title = styled.h1`
     font-size: 3em;
     font-weight: bold;
-    
+    opacity: 1;
 `;
 const SubTitle = styled.h2`
     font-size: 2em;
-    
-
+    opacity: 1;
 `;
 
 const Header = () => {

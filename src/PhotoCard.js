@@ -4,7 +4,8 @@ import Photo from "./Photo";
 import Dropdown from "./Dropdown"
 const PhotoCard = (props) => {
     const [photo, setPhoto] = useState()
-    const [date, setDate] =useState("2020-07-27")
+    const [date, setDate] =useState("2020-07-27");
+    const dates = ["2020-07-28", "2020-07-27", "2020-07-26", "2020-07-25", "2020-07-24"];
     console.log(props);
     useEffect((date) => {
         axios.get(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=95tF10VHI5EfPhC5gOpgdoFIPeQCMqjwGiKznXUD`)
@@ -15,8 +16,8 @@ const PhotoCard = (props) => {
     console.log(photo);
     return (
         <div className="container"> 
-            <Dropdown dates={props.props} setDate={setDate}/>
             <Photo photo = {photo} />
+            <Dropdown dates={props.props} setDate={setDate}/>
         </div>
     );
 }

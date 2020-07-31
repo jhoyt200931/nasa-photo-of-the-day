@@ -4,10 +4,21 @@ import styled from "styled-components";
 document.querySelector(".date-list");
 
 
+
+const Container = styled.div`
+display: flex;
+
+flex-direction: column;
+justify-content: center;
+width: 20%;
+margin-left: 40%;
+
+`;
 const Content = styled.div`
     width: 10%;
     margin-left: 15%;
     border: 1px solid black;
+  
     background-color: royalblue;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -16,20 +27,11 @@ const Content = styled.div`
     z-index: 1;
 `;
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 20%;
-    margin-left: 40%;
-`;
-
 const ListItem = styled.li`
     border-bottom: 1px solid black;
-    background-color: royalblue;
+    
     width: 80%;
     list-style-type: none;
-    margin-right: 25%;
     margin-bottom: 5px;
     padding-bottom: 5px;
 `;
@@ -38,15 +40,22 @@ const ListItem = styled.li`
 const Button = styled.button`
     border-radius: 15%;
     background-color: slategray;
-
-
+    
 `;
 
 const Ul = styled.ul`
-    background-color: royalblue;
     width: 100%;
-    margin-right: 20%;
+    box-sizing: border-box;
+    margin-right: 10%;
+    text-align: center;
+    
 `;
+
+const Click = styled.div`
+    font-size: 1.3em;
+    font-weight: bold;
+`;
+
 
 const Dropdown = (props) => {
     const [open, setOpen] = useState(false);
@@ -55,12 +64,12 @@ const Dropdown = (props) => {
     return (
         <Container className="dropdown-container">
             <div className="dropdown-header" tabIndex={0} role="button" onClick={() => toggle(!open)}>
-                <div className="dropdown-header_title">
+                <Click className="dropdown-header_title">
                     <p className="dropdown-title">Select a date</p>
-                </div>
-                <div className="dropdown-action">
+                </Click>
+                <Click className="dropdown-action">
                     <p>{open ? "Close" : "Open"}</p>
-                </div>
+                </Click>
                 </div>
                 <Content className="date-list" className={open ? "open-dates" : "closed-dates"}>
                     <Ul>
